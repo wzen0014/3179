@@ -1,0 +1,7 @@
+﻿Suburb,Type,SellerG,Postcode,Bedroom,Bathroom,Car,Landsize,BuildingArea,YearBuilt,Latitude,Longtitude,Price
+Melbourne,u,hockingstuart,3000,4,2,1,0,213,1938,-37.8177,144.9544,1850000
+Melbourne,u,Greg,3000,3,2,1,0,122,1998,-37.8095,144.9691,750000
+Melbourne,u,MICM,3000,2,1,1,0,113,1999,-37.81317,144.95452,740000
+Melbourne,u,MICM,3000,1,1,2,0,102,1965,-37.8132,144.9545,680000
+Melbourne,u,MICM,3000,2,2,1,0,94,1965,-37.8166,144.9635,733000
+Melbourne,u,hockingstuart,3000,2,2,1,0,89,1997,-37.8095,144.9691,760000
