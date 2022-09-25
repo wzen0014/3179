@@ -1,9 +1,9 @@
-,Var1,Freq
-1,Australian National Territory,112
-2,New South Wales,4081
-3,Northern Territory,485
-4,Queensland,2966
-5,South Australia,1168
-6,Tasmania,374
-7,Victoria,2945
-8,Western Australia,1953
+,State,Count,Longitude,Latitude
+1,Australian Capital Territory,112,148.983,-35.4618
+2,New South Wales,4081,146.781,-32.4751
+3,Northern Territory,485,133.78,-20.1026
+4,Queensland,2966,144.778,-23.1364
+5,South Australia,1168,135.783,-29.6504
+6,Tasmania,374,146.603,-42.1383
+7,Victoria,2945,144.75,-37.0082
+8,Western Australia,1953,121.646,-25.8483
