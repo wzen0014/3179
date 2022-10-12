@@ -1,4 +1,4 @@
-State,MoNorthern Territoryh,Year,Dayweek,Time,Crash Type,Bus InvolvemeNorthern Territory,Heavy Rigid Truck InvolvemeNorthern Territory,Articulated Truck InvolvemeNorthern Territory,Speed Limit,Road User,Gender,Age,Christmas Period,Easter Period,Age Group,Day of week,Time of day
+State,MoNorthern Territoryh,Year,Dayweek,Time,Crash_Type,Bus InvolvemeNorthern Territory,Heavy Rigid Truck InvolvemeNorthern Territory,Articulated Truck InvolvemeNorthern Territory,Speed_Limit,Road User,Gender,Age,Christmas Period,Easter Period,Age_Group,Day _of _week,Time _of _day
 Australian Capital Territory,1,2010,Friday,8:05,Multiple,No,No,No,60,Pedal cyclist,Male,60,No,No,40_to_64,Weekday,Day
 Australian Capital Territory,2,2010,Tuesday,16:00,Multiple,No,Yes,No,80,Driver,Male,18,No,No,17_to_25,Weekday,Day
 Australian Capital Territory,2,2010,Wednesday,20:50,Multiple,No,No,No,60,Motorcycle rider,Male,32,No,No,26_to_39,Weekday,Night
