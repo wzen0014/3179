@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data":{"url": "https://raw.githubusercontent.com/wzen0014/3179/main/Crash_Data.csv"},
   "width": 568,
-  "height": 150,
+  "height": 162,
   "title": {"text":"Number of road accidents by Age", "fontSize": 15},
 
   "encoding": {"x": {"field": "Age_Group", "type":"nominal",
