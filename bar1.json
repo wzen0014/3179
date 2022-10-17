@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data":{"url": "https://raw.githubusercontent.com/wzen0014/3179/main/Crash_Data.csv"},
+  "width": 568,
+  "height": 150,
+  "title": {"text":"Number of road accidents by Age", "fontSize": 15},
+
+  "encoding": {"x": {"field": "Age_Group", "type":"nominal",
+    "axis":{
+      "labelAngle":0
+    },
+    "title":"Age Group",
+    "sort": ["40 - 64", "26 - 39", "17 - 25", "Over 75", "65 - 74", "0 - 16"]
+    }},
+
+  "layer": [
+    {
+      "encoding": {
+        "y": {"aggregate":"count", "field": "Age_Group", "type": "quantitative","title": "Number of accidents"}
+        
+      },
+      "layer": [
+        {
+          "mark":{"type": "bar", "tooltip":true, "color":"#b8f1cc"}
+        
+        },
+        
+        {
+          "mark":{"type": "text","dy":-5},
+          "encoding": {
+            "text":{
+              "aggregate": "count","field": "Age_Group", "type": "nominal",
+              "condition":[
+                {
+                  "test":"datum['Age_Group'] == '40 - 64'",
+                  "value":["Age group 40 - 64 with the most road accidents: 4409"]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+    
+  ]
+  
+  
+
+
+  
+
+
+
+}

@@ -1,0 +1,151 @@
+#vbox {
+    width: 1080px;
+    margin: 0 auto;
+    background-color: #BEDCFE;
+}
+  
+header {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+
+  font-size: 33px;
+  color: rgb(28, 24, 24);
+  background-color: #4379ed;
+
+}
+
+header h1{
+  margin-top: 1.5rem;
+}
+
+
+header h2{
+  margin-top: 1.5rem;
+  padding: 0 0 1rem 0;
+  letter-spacing: 2.5px;
+  font-size: 16px;
+}
+
+header p{
+  margin: 0 0 1rem 0 ;
+  padding: 0 0 1rem 0;
+  letter-spacing: 2px;
+}
+
+hr {
+  height: 3px;
+  margin-bottom: 2rem;
+  width: 90%;
+  background: black;
+}
+
+
+#mapBox, #lineBox, #barBox, #barBox2, #pieBox{
+  margin-left: 4.3rem;
+}
+
+#mapBox p2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+  color: rgb(255, 0, 0);
+  
+}
+
+#lineBox p2, #barBox p2, #barBox2 p2, #pieBox p2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+  
+}
+
+
+#mapBox p{
+  text-align: justify;
+  margin-right: 4.8rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  letter-spacing: 2.1px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+}
+
+#lineBox p{
+  text-align: justify;
+  margin-left: 42rem;
+  margin-right: 4.8rem;
+  margin-bottom: -17.4rem;
+
+  padding: 0;
+  letter-spacing: 1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  
+}
+
+#barBox p{
+  text-align: justify;
+  margin-left: 42rem;
+  margin-right: 4.8rem;
+  margin-bottom: -10.55rem;
+  padding: 0;
+  letter-spacing: 1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  
+}
+
+#barBox2 p{
+  text-align: justify;
+  margin-left: 42rem;
+  margin-right: 4.8rem;
+  margin-bottom: -13.2rem;
+  padding: 0;
+  letter-spacing: 1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  
+}
+
+#pieBox p{
+  text-align: justify;
+  margin-left: 42rem;
+  margin-right: 4.8rem;
+  margin-bottom: -14.65rem;
+  padding: 0;
+  letter-spacing: 1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  
+}
+
+
+footer {
+  text-align: right;
+  font-family: 'Times New Roman', Times, serif;
+
+  font-size: 16px;
+  color: rgb(28, 24, 24);
+  background-color: #4379ed;
+}
+
+footer h1{
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+
+  
+
+
+
+
+  
+  
+  

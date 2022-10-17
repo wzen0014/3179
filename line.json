@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data":{"url": "https://raw.githubusercontent.com/wzen0014/3179/main/Crash_Data.csv"},
+  "width": 438,
+  "height": 250,
+  "title": {"text":"Top 5 of road accidents by state in Australia each year", "fontSize": 15},
+  
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2021,
+        "step": 1,
+        "name": "Start Year: "
+        
+      }
+    },
+    {
+      "name": "State_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "New South Wales",
+          "Queensland",
+          "South Australia",
+          "Victoria",
+          "Western Australia"
+        ],
+        "labels":[
+          "Show All",
+          "New South Wales",
+          "Queensland",
+          "South Australia",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "State Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year >= Year_selection"},
+    {"filter": "State_selection == null || datum.State == State_selection"}
+ 
+  ],
+  "encoding": {"x": {"field": "Year", "type":"nominal",
+    "axis":{
+      "labelAngle":0
+    }
+    }},
+
+  "layer": [
+    {
+      "encoding": {
+        "y": {"aggregate":"count", "field": "Year", "type": "quantitative","title": "Number of accidents"},
+        "color": {"field": "State", "type": "nominal", 
+          "scale": {"domain": [
+              "New South Wales",
+              "Queensland",
+              "South Australia",
+              "Victoria",
+              "Western Australia"], 
+              "range": [
+                "#FF001C",
+                "#F89144",
+                "#FBEFB6",
+                "#528BDA", 
+                "#F6BCC3"
+                ]
+                
+            } 
+        }
+      },
+      "layer": [
+        {
+          "mark":{"type": "line"}
+        },
+        
+        {
+          "mark":{"type": "circle","tooltip":true}
+          
+        },
+
+        {
+          "mark":{"type": "text", "dy": -10},
+          
+          "encoding": {
+            "text":{
+              "aggregate":"count", "field": "Year", "type": "quantitative",
+              "condition":[
+                {
+                "test": "datum['Year']== '2010'",
+                "value": [
+                  "NSW had the most road accidents in 2010: 403"
+                ]
+              }
+              ]
+            },
+            
+          "opacity": {
+            "condition": {
+              "test": "datum['State']== 'New South Wales'",
+              "value": 1
+            },
+            "value": 0
+          }
+
+            
+        
+          }
+        },
+
+        {
+          "mark":{"type": "text", "dy": -8},
+          
+          "encoding": {
+            "text":{
+              "aggregate":"count", "field": "Year", "type": "quantitative",
+              "condition":[
+                {
+                "test": "datum['Year']== '2016'",
+                "value": [
+                  "VIC highest value: 287"
+                ]
+              }
+              ]
+            },
+            
+          "opacity": {
+            "condition": {
+              "test": "datum['State']== 'Victoria'",
+              "value": 1
+            },
+            "value": 0
+          }
+
+            
+        
+          }
+        }
+      ]
+    }
+    
+  ]
+  
+  
+
+
+  
+
+
+
+}

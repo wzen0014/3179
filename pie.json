@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data":{"url": "https://raw.githubusercontent.com/wzen0014/3179/main/Crash_Data.csv"},
+  "width": 566,
+  "height": 250,
+  "title": {"text":"Number of road accidents by day week", "fontSize": 15},
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "num_dayweek"}],
+      "groupby": ["Dayweek"]
+    },
+
+    {
+      "filter": "select_day == null || datum.Dayweek == select_day"
+    }
+  ],
+
+  "params": [
+    {
+      "name": "select_day",
+      "bind":{
+        "input": "select",
+        "options": [
+          null,
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday", 
+          "Friday", 
+          "Saturday", 
+          "Sunday"
+
+        ],
+        "labels": [
+          "Show All",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday", 
+          "Friday", 
+          "Saturday", 
+          "Sunday"
+        ],
+        "name": "Day Selection: "
+      }
+    }
+  ],
+  
+  "encoding": {
+    
+    "theta": {"field": "num_dayweek", "type": "quantitative", "title": "Number of accidents"},
+    "color": {"field": "Dayweek", "type": "nominal","title":"Time of Day",
+   
+    "scale":   {"domain": 
+      ["Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday", 
+          "Friday", 
+          "Saturday", 
+          "Sunday"],"range": [
+              "#FBE3D8",
+              "#D6D6D6",
+              "#FAFAC7",
+              "#C7DFFA",
+              "#CFC7FA",
+              "#FAC7FA",
+              "#FAC7CB", 
+              "#D164C6"
+              ]}
+    },
+
+    "tooltip": [
+      {"field": "Dayweek", "type": "nominal", "title": "Day"},
+      {"field" : "num_dayweek", "type": "quantitative", "title": "Number of accidents"}
+    ]
+
+
+  },
+  
+  "layer": [{
+    "mark": {"type": "arc", "outerRadius": 120,"tooltip":true
+    }
+    
+    },
+
+    
+
+    {
+        "mark":{"type": "text", "dy":50, "dx":120},
+        "encoding": {
+          "text":{
+            "field": "Dayweek", "type": "nominal",
+            "condition":[
+              {
+                "test":"datum['Dayweek'] == 'Saturday'",
+                "value":["Most road accidents on Saturday: 2351"]
+              }
+            ]
+            
+          },
+          "color":{
+            "value":"black"
+          },
+          "opacity": {
+          "condition": {
+            "test": "datum['Dayweek']== 'Saturday'",
+            "value": 1
+          },
+          "value": 0
+        }
+        }
+    },
+
+    {
+      "mark":{"type": "text", "dy":-15, "dx":-120},
+      "encoding": {
+        "text":{
+          "field": "Dayweek", "type": "nominal",
+          "condition":[
+            {
+              "test":"datum['Dayweek'] == 'Tuesday'",
+              "value":["Least road accidents on Tuesday: 1711"]
+            }
+          ]
+          
+        },
+        "color":{
+          "value":"black"
+        },
+        "opacity": {
+        "condition": {
+          "test": "datum['Dayweek']== 'Tuesday'",
+          "value": 1
+        },
+        "value": 0
+      }
+      }
+    }
+    
+]
+
+}

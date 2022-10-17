@@ -1,21 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-<script src="vega_lite_vis.js"></script>
-<title> Week 10 Homework </title>
+
+<title> Australian Car Crash Analysis Report </title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
 </head>
-<body>
-<h1>Week 10 Homework - Map</h1>
-<div id="map">
-</div>
-<h1>Week 10 Homework - Line Chart</h1>
-<div id="line">
-</div>
-</body>
+
+    <body>
+
+        <div id="vbox">
+            <header>
+              <h1>Australian Road Accident Report</h1>
+              
+            </header>
+        
+
+            <div id="mapBox">
+                <p>
+                    Australian residents own an average of <p2>1.8</p2> cars per census household, and cars remain the most popular transport to work in every state and territory. Therefore, the issue of road safety is of great concern. In Australia, about <p2>14,000</p2> traffic accidents were counted between 2010 and 2021. NSW is the state with the most road accidents with <p2>4,081</p2>.
+                </p>
+                <div id="map"></div>
+                
+            
+            </div>
+            <hr>
+
+            <div id="lineBox">
+                <p>
+                    NSW recorded the most road accidents in <p2>2010</p2> with <p2>403</p2> times. Since then the decline has remained at <p2>over 300</p2> road accidents per year. Until it falls <p2>below 300</p2> per year from <p2>2020</p2>. Taken as a whole, the number of road crashes in every Australian state has been on a downward trend. This means that more and more people are starting to pay attention to road safety.
+                </p>
+                <div id="line"></div>
+                
+            </div>
+            
+            <hr>
+
+            <div id="barBox">
+                <p>
+                    The age group with the most road accidents is the <p2>40 to 64</p2>, most of whom are in the final stages of their careers and are preparing to retire. Therefore, people in this age group need to pay more attention to road safety.
+                </p>
+                <div id="bar1"></div>
+            </div>
+        
+
+            <div id="barBox2">
+                <p>
+                    The age of most road accidents is <p2>19 years old</p2> with a total of <p2>375</p2>, which is a phenomenon that needs attention. Because this age is when many people have just obtained their driver's licenses, they need to pay more attention to their own protection and driving safety.
+                </p>
+                <div id="bar2"></div>
+            </div>
+            <hr>
+
+            <div id="pieBox">
+                <p>
+                    The day with the most road accidents was <p2>Saturday</p2> with a total of <p2>2,351</p2>. At the same time, both Friday and Sunday exceeded <p2>2,000</p2> times. This reminds everyone to pay attention to traffic safety on weekends and Fridays. Don't relax your vigilance about driving safety because of the holiday.
+                </p>
+                <div id="pie"></div>
+            </div>
+
+            <footer>
+                <h1>
+                    - Designed by Weihao Zeng
+                </h1>
+            </footer>
+
+        </div>    
+
+    </body>
+
+    <script type="text/javascript">      
+        var vg_1 = "js/map.json";
+        vegaEmbed("#map", vg_1,{actions:false}).then(function(result) {}).catch(console.error);
+
+        var vg_2 = "js/line.json";
+        vegaEmbed("#line", vg_2,{actions:false}).then(function(result) {}).catch(console.error);
+
+        var vg_3 = "js/bar1.json";
+        vegaEmbed("#bar1", vg_3,{actions:false}).then(function(result) {}).catch(console.error);
+
+        var vg_4 = "js/bar2.json";
+        vegaEmbed("#bar2", vg_4,{actions:false}).then(function(result) {}).catch(console.error);
+
+        var vg_5 = "js/pie.json";
+        vegaEmbed("#pie", vg_5,{actions:false}).then(function(result) {}).catch(console.error);
+
+      </script>
+
 </html>
+
+
