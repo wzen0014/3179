@@ -49,7 +49,7 @@
   "encoding": {
     
     "theta": {"field": "num_dayweek", "type": "quantitative", "title": "Number of accidents"},
-    "color": {"field": "Dayweek", "type": "nominal","title":"Time of Day",
+    "color": {"field": "Dayweek", "type": "nominal","title":"Day of week",
    
     "scale":   {"domain": 
       ["Monday",
